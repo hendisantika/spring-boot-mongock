@@ -67,4 +67,10 @@ public class FirstLastNameChangelog {
 
     }
 
+    private String[] splitNamesForUser(User user) {
+        if (user.getFullName() == null || user.getFullName().isEmpty() || !user.getFullName().contains(" ")) {
+            throw new ParseNameException("Failed to parse the user's name");
+        }
+        return user.getFullName().split(" ");
+    }
 }

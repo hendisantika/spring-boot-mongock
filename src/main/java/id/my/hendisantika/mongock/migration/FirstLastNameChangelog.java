@@ -2,6 +2,7 @@ package id.my.hendisantika.mongock.migration;
 
 import io.mongock.api.annotations.ChangeUnit;
 import io.mongock.api.annotations.Execution;
+import io.mongock.api.annotations.RollbackExecution;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.mongodb.core.MongoTemplate;
@@ -72,5 +73,10 @@ public class FirstLastNameChangelog {
             throw new ParseNameException("Failed to parse the user's name");
         }
         return user.getFullName().split(" ");
+    }
+
+    @RollbackExecution
+    public void rollback() {
+        // Our change is backward-compatible; we don't need to implement a rollback mechanism.
     }
 }

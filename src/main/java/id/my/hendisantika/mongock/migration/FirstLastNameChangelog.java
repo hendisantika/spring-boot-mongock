@@ -1,5 +1,6 @@
 package id.my.hendisantika.mongock.migration;
 
+import id.my.hendisantika.mongock.model.User;
 import io.mongock.api.annotations.ChangeUnit;
 import io.mongock.api.annotations.Execution;
 import io.mongock.api.annotations.RollbackExecution;
@@ -8,7 +9,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
+import org.springframework.data.mongodb.core.query.Update;
 
+import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import static org.springframework.data.mongodb.core.query.Criteria.where;

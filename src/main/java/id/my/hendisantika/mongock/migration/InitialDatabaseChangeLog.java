@@ -2,6 +2,7 @@ package id.my.hendisantika.mongock.migration;
 
 import io.mongock.api.annotations.BeforeExecution;
 import io.mongock.api.annotations.ChangeUnit;
+import io.mongock.api.annotations.Execution;
 import io.mongock.api.annotations.RollbackBeforeExecution;
 import lombok.extern.slf4j.Slf4j;
 
@@ -26,5 +27,10 @@ public class InitialDatabaseChangeLog {
     @RollbackBeforeExecution
     public void rollbackBeforeExecution() {
         log.info("rollback before seeding database...");
+    }
+
+    @Execution
+    public void executionMethodName() {
+        log.info("execution seeding database...");
     }
 }

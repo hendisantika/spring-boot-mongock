@@ -1,6 +1,8 @@
 package id.my.hendisantika.mongock.migration;
 
+import io.mongock.api.annotations.BeforeExecution;
 import io.mongock.api.annotations.ChangeUnit;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Created by IntelliJ IDEA.
@@ -12,6 +14,11 @@ import io.mongock.api.annotations.ChangeUnit;
  * Time: 16.28
  * To change this template use File | Settings | File Templates.
  */
+@Slf4j
 @ChangeUnit(order = "001", id = "user-seeder", author = "hendisantika")
 public class InitialDatabaseChangeLog {
+    @BeforeExecution
+    public void beforeSeedDatabase() {
+        log.info("before seeding database...");
+    }
 }

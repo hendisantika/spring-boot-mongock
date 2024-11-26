@@ -1,1 +1,10 @@
 services:
+  mongock:
+    image: mongo:8.0.0
+    container_name: "mongock"
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./dbdata8:/data/db
+volumes:
+  dbdata8:

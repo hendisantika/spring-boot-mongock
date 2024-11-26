@@ -4,6 +4,7 @@ import io.mongock.api.annotations.BeforeExecution;
 import io.mongock.api.annotations.ChangeUnit;
 import io.mongock.api.annotations.Execution;
 import io.mongock.api.annotations.RollbackBeforeExecution;
+import io.mongock.api.annotations.RollbackExecution;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -32,5 +33,10 @@ public class InitialDatabaseChangeLog {
     @Execution
     public void executionMethodName() {
         log.info("execution seeding database...");
+    }
+
+    @RollbackExecution
+    public void rollbackExecutionMethodName() {
+        log.info("rollback execution seeding database...");
     }
 }

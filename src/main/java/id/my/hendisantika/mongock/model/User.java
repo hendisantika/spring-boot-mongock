@@ -3,8 +3,9 @@ package id.my.hendisantika.mongock.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.util.Date;
+import org.bson.types.ObjectId;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
  * Created by IntelliJ IDEA.
@@ -16,14 +17,13 @@ import java.util.Date;
  * Time: 17.07
  * To change this template use File | Settings | File Templates.
  */
+@Document(collection = "users")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class User {
-    private Long id;
-    private String username;
-    private String fullName;
-    private String firstName;
-    private String lastName;
-    private Date dob;
+    @Id
+    private ObjectId id;
+    private String name;
+    private String email;
 }

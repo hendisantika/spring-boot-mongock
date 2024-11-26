@@ -1,6 +1,6 @@
 package id.my.hendisantika.mongock;
 
-import io.mongock.runner.springboot.EnableMongock;
+import com.github.cloudyrock.spring.v5.EnableMongock;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

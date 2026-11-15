@@ -14,7 +14,7 @@
     <name>spring-boot-mongock</name>
     <description>spring-boot-mongock</description>
     <properties>
-        <java.version>23</java.version>
+        <java.version>25</java.version>
     </properties>
     <dependencies>
         <dependency>

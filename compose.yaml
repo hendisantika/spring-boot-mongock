@@ -1,6 +1,6 @@
 services:
   mongock:
-    image: mongo:8.0.0
+    image: mongo:9.0.8
     container_name: "mongock"
     ports:
       - "27017:27017"
